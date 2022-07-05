@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Language" content="en">
+        <meta name="keywords" content="Frontend, HTML, CSS, вёрстка">
+        <meta name="description" content="Website template">
+        <link rel="stylesheet" href="./css/main.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:wght@700;800&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <title>Tajem</title>
+    </head>
+    <body class="body">
+        <header class="header">
+            <nav class="navigation">
+                <svg class="navigation__logo" id="Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="50" viewBox="0 0 128 50">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          font-size: 30px;
+                          filter: url(#filter);
+                          fill: #fff;
+                          text-anchor: middle;
+                          font-family: Roboto;
+                          font-weight: 200;
+                        }
+                      </style>
+                      <filter id="filter" x="55" y="11" width="73" height="29" filterUnits="userSpaceOnUse">
+                        <feImage preserveAspectRatio="none" x="55" y="11" width="73" height="29" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzMiIGhlaWdodD0iMjkiIHZpZXdCb3g9IjAgMCA3MyAyOSI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogdXJsKCNsaW5lYXItZ3JhZGllbnQpOwogICAgICB9CiAgICA8L3N0eWxlPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJsaW5lYXItZ3JhZGllbnQiIHkxPSIxNC41IiB4Mj0iNzMiIHkyPSIxNC41IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwZTBkMCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM0YWEzY2MiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjczIiBoZWlnaHQ9IjI5Ii8+Cjwvc3ZnPgo="/>
+                        <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+                        <feBlend result="blend" in2="SourceGraphic"/>
+                      </filter>
+                    </defs>
+                    <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="44" height="50" xlink:href="data:img/png;base64,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"/>
+                    <text id="tajam" class="cls-1" x="92.187" y="34">tajam</text>
+                  </svg>
+                <ul class="nav__menu">
+                    <li class="nav__home">HOME</li>
+                    <li class="nav__about">ABOUT</li>
+                    <li class="nav__expertise">EXPERTISE</li>
+                    <li class="nav__teams">TEAMS</li>
+                    <li class="nav__works">WORKS</li>
+                    <li class="nav__people-say">PEOPLE SAY</li>
+                    <li class="nav__contact">CONTACT</li>
+                </ul>
+            </nav>
+            <h1 class="header__h1">We Are Awesome Creative Agency</h1>
+            <p class="header__description">
+                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+            </p>
+            <button class="header__button">
+                LEARN MORE
+            </button>
+        </header>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    <script src="./js/min/script.min.js"></script>
+</html>
