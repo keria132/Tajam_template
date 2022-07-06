@@ -2,59 +2,152 @@
 
 @color-turquoise: #00e0d0;
 
-header.header{
+.header{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     background-image: url(../img/header.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     color: white;
-    height: 42vw;
-    gap: 3vw 0;
-    nav.navigation{
+    height: 120vw;
+    gap: 5vw 0;
+    .nav{
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        gap: 3vw 0;
         width: 100%;
         padding: 1% 0 1% 0;
-        svg.navigation__logo{
-            flex: 1 1 45%;
+        .nav__logo{
+            width: 30%;
         }
-        ul.nav__menu{
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: flex-start;
+        .nav__menu{
+            display: none;
             align-items: center;
-            flex: 1 1 55%;
-            gap: 0% 2%;
+            justify-content: center;
+            gap: 0 2%;
+            width: 80%;
             li{
                 .text-style(p2);
             }
         }
     }
-    h1.header__h1{
+    .header__h1{
         .text-style(h1);
-        width: 50%;
-        height: 4vw;
-        line-height: 4vw;
+        width: 80%;
+        height: 25vw;
         margin-top: 5vw;
         position: relative;
     }
-    h1.header__h1:after {
+    .header__h1:after {
         content:'';
         position: absolute;
         left:0; right:0;
         top: 100%;
-        margin: 10px auto;
-        width: 7%;
-        height: 1px;
+        margin: auto;
+        width: 20%;
+        height: 5px;
+        border-radius: 5px;
         background: @color-turquoise;
     }
-    p.header__description{
+    .header__description{
         .text-style(p);
-        width: 50%;
+        width: 80%;
     }
-    button.header__button{
+    .header__button{
         .buttons-style();
+        padding: 3% 5% 3% 5%;
     }
 }
+
+
+//////////////////////////////////////
+@media screen and (min-width: 600px){
+    .header{
+        height: 100vw;
+
+        .nav{
+            .nav__logo{
+                width: 20%;
+            }
+        }
+        
+    }
+}
+/////////////////////////////////////
+@media screen and (min-width: 768px){
+    .header{
+        height: 70vw;
+
+        .nav{
+            .nav__logo{
+                width: 20%;
+            }
+            .nav__menu{
+                display: flex;
+            }
+        }
+
+        .header__h1{
+            height: 10vw;
+        }
+
+        .header__button{
+            padding: 2% 5% 2% 5%;
+        }
+    }
+}
+/////////////////////////////////////
+@media screen and (min-width: 992px){
+    .header{
+        height: 60vw;
+
+        .header__h1{
+            height: 10vw;
+            line-height: 10vw;
+            margin-top: 0vw;
+        }
+
+        .header__button{
+            padding: 1% 5% 1% 5%;
+        }
+    }
+}
+//////////////////////////////////////
+@media screen and (min-width: 1200px){
+    .header{
+        background-size: 100%;
+        height: 41vw;
+        gap: 3vw 0;
+        .nav{
+            .nav__logo{
+                width: 45%;
+            }
+            .nav__menu{
+                justify-content: flex-start;
+                width: 55%;
+            }
+        }
+
+        .header__h1{
+            width: 50%;
+            height: 4vw;
+            line-height: 4vw;
+            margin-top: 5vw;
+        }
+        .header__h1:after{
+            margin: 10px auto;
+            width: 7%;
+            height: 2px;
+        }
+        .header__description{
+            width: 50%;
+        }
+        .header__button{
+            .buttons-style();
+        }
+    }
+}
+
