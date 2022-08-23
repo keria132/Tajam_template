@@ -1,0 +1,108 @@
+@import "./_functions.less";
+
+.expertise{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 3vw;
+    
+    .expertise__header{
+        .text-style(h2);
+    }
+    .expertise__description{
+        .text-style(p);
+        font-family: 'Playfair Display', serif;
+        position: relative;
+        padding-bottom: 2%;
+        width: 80%;
+    }
+    .expertise__description:after{
+        content:'';
+        position: absolute;
+        left:0; right:0;
+        top: 100%;
+        margin: auto;
+        width: 15%;
+        height: 2px;
+        border-radius: 5px;
+        background: #c6c4c9;
+    }
+    .grid{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        .grid-item{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 80%;
+            row-gap: 2vw;
+            padding: 2vw 0 2vw 0;
+            border-bottom: 2px solid #ebebeb;
+            .grid-item__header{
+                .text-style(h3);
+            }
+            .grid-item__description{
+                .text-style(p);
+            }
+        }
+    }
+}
+
+////////////////////////////
+@media screen and (min-width: 768px){
+    .expertise{
+        row-gap: 1vw;
+
+        .grid{
+            .grid-item{
+                width: 40%;
+                //border-right: 2px solid #ebebeb;
+                .grid-item__icon{
+                    height: 40%;
+                }
+            }
+
+            .grid-item:nth-child(1){
+                border-right: 2px solid #ebebeb;
+            }
+            .grid-item:nth-child(3){
+                border-right: 2px solid #ebebeb;
+            }
+            .grid-item:nth-child(5){
+                border-right: 2px solid #ebebeb;
+            }
+
+        }
+    }
+}
+
+////////////////////////////////
+@media screen and (min-width: 1200px){
+    .expertise{
+        row-gap: 1vw;
+
+        .grid{
+            width: 70%;
+
+            .grid-item{
+                //row-gap: 0;
+                width: 30%;
+                //justify-content: space-between;
+                .grid-item__icon{
+                    height: 40%;
+                }
+            }
+            .grid-item{
+                border-right: 2px solid #ebebeb;
+            }
+            .grid-item:nth-child(3){
+                border-right: none;
+            }
+            .grid-item:nth-child(6){
+                border-right: none;
+            }
+        }
+    }
+}
