@@ -1,0 +1,110 @@
+@import "./_functions.less";
+
+.team{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 5% 0 5% 0;
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    row-gap: 3vw;
+
+    .team__header{
+        .text-style(h2);
+    }
+
+    .team__description{
+        .text-style(h3__p);
+    }
+
+    .profiles{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        gap: 5vw 5vw;
+
+        .profile{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 40%;
+            row-gap: 1vw;
+            border: white solid 1px;
+            .profile__img{
+                background-color: white;
+                width: 100%;
+                height: 40vw;
+            }
+            .profile__name{
+                .text-style(h3);
+            }
+            .profile__position{
+                .text-style(p);
+            }
+        }
+    }
+
+    .team__hiring-description{
+        .text-style(p);
+        padding-bottom: 1vw;
+    }
+    .team__hiring-button{
+        .buttons-style();
+    }
+}
+
+////////////////////////////////////
+
+@media screen and (min-width: 768px){
+    .team{
+        row-gap: 1vw;
+        .profiles{
+            .profile{
+                padding-bottom: 1vw;
+                .profile__img{
+                    height: 30vw;
+                }
+            }
+        }
+    }
+}
+
+////////////////////////////////////
+
+@media screen and (min-width: 992px){
+    .team{
+        
+        .profiles{
+            .profile{
+                .profile__img{
+                    height: 25vw;
+                }
+            }
+        }
+    }
+}
+
+////////////////////////////////////
+
+@media screen and (min-width: 1200px){
+    .team{
+        .profiles{
+            width: 80%;
+            .profile{
+                width: 20%;
+                row-gap: 0vw;
+                .profile__img{
+                    height: 18vw;
+                }
+                .profile__name{
+                    padding-top: 1vw;
+                }
+            }
+        }
+    }
+}
+
