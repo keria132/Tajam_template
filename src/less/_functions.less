@@ -1,6 +1,6 @@
 @color-turquoise: #00e0d0;
 
-.text-style(p2, @size: 1rem){
+.text-style(nav, @size: 1rem){
     font-family: 'Roboto', sans-serif;
     font-size: @size;
     font-weight: 600;
@@ -24,6 +24,31 @@
     font-size: @size;
     font-weight: 600;
     text-align: center;
+}
+
+.text-style(h3__p, @size: 1rem){
+    font-family: 'Playfair Display', serif;
+    font-size: @size;
+    font-weight: lighter;
+    text-align: center;
+    line-height: 1.5rem;
+    position: relative;
+    padding-bottom: 2%;
+    width: 80%;
+    &:after{
+        content:'';
+        position: absolute;
+        left:0; right:0;
+        top: 100%;
+        margin: auto;
+        width: 15%;
+        height: 1px;
+        border-radius: 5px;
+        background: white;
+        @media screen and (min-width: 1200px){
+            width: 5%;
+        }
+    }
 }
 
 .text-style(p, @size: 1rem){

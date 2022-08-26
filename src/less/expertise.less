@@ -5,26 +5,15 @@
     flex-flow: column nowrap;
     align-items: center;
     row-gap: 3vw;
+    padding-bottom: 10vw;
     
     .expertise__header{
         .text-style(h2);
     }
     .expertise__description{
-        .text-style(p);
-        font-family: 'Playfair Display', serif;
-        position: relative;
-        padding-bottom: 2%;
-        width: 80%;
+        .text-style(h3__p);
     }
     .expertise__description:after{
-        content:'';
-        position: absolute;
-        left:0; right:0;
-        top: 100%;
-        margin: auto;
-        width: 15%;
-        height: 2px;
-        border-radius: 5px;
         background: #c6c4c9;
     }
     .grid{
