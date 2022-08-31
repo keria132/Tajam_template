@@ -1,0 +1,133 @@
+@import './_functions.less';
+
+.contact{
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 5vw;
+
+    .contact-form{
+        width: 100%;
+        
+        .contact-form__field{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            row-gap: 5vw;
+
+            .contact-form__header{
+                .text-style(h2);
+                padding: 5vw 0 5vw 0;
+            }
+
+            .contact-form__input{
+                .input-style();
+                width: 70%;
+            }
+
+            .contact-form__message{
+                .input-style();
+                width: 70%;
+            }
+
+            .contact-form__submit{
+                .buttons-style();
+            }
+        }
+    }
+
+    .clients{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 5vw;
+
+        .clients__header{
+            .text-style(h2);
+            width: 100%;
+            text-align: center;
+            padding-top: 5%;
+        }
+
+        .clients__img{
+            width: 25%;
+            align-self: center;
+        }
+    }
+}
+
+/////////////////////////////////////
+
+@media screen and (min-width: 768px){
+    .contact{
+        .clients{
+            .clients__img{
+                width: 15%;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////
+
+@media screen and (min-width: 992px){
+    .contact{
+        justify-content: center;
+        .contact-form{
+            width: 40%;
+            .contact-form__field{
+                .contact-form__header{
+                }
+            }
+        }
+        .clients{
+            width: 40%;
+            gap: 0vw 10vw;
+            .clients__header{
+                padding: 5vw 0 0vw 0;
+            }
+            .clients__img{
+                width: 20%;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////
+
+@media screen and (min-width: 1200px){
+    .contact{
+        gap: 0 5vw;
+        .contact-form{
+            width: auto;
+            
+            .contact-form__field{
+                width: 25vw;
+                gap: 2vw 0vw;
+                align-items: flex-start;
+                .contact-form__header{
+                    padding: 4vw 0 2vw 0;
+                    text-align: left;
+                }
+                .contact-form__input{
+                    width: 30vw;
+                }
+                .contact-form__message{
+                    width: 30vw;
+                }
+            }
+        }
+        .clients{
+            width: 30%;
+            justify-content: flex-start;
+            gap: 0 5vw;
+            .clients__header{
+                padding: 4vw 0 0vw 0;
+                text-align: left;
+            }
+            .clients__img{
+                width: 30%;
+            }
+        }
+    }
+}

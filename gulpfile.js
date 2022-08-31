@@ -87,7 +87,8 @@ function watchFiles(){
 
 function build(cb){
 
-	gulp.src('./src/less/**/*.less')
+	// gulp.src('./src/less/**/*.less')
+    gulp.src('./src/less/**/main.less')
 		.pipe(sourcemaps.init())
 		.pipe(less())
 		.pipe(cleanCss({compatibility: 'ie8'}))

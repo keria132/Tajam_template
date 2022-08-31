@@ -5,7 +5,7 @@
     flex-flow: column nowrap;
     align-items: center;
     padding: 5% 0 5% 0;
-    background-image: url(../img/header.png);
+    background-image: url(../img/team__background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -60,6 +60,7 @@
 ////////////////////////////////////
 
 @media screen and (min-width: 768px){
+
     .team{
         row-gap: 1vw;
         .profiles{
@@ -71,13 +72,14 @@
             }
         }
     }
+
 }
 
 ////////////////////////////////////
 
 @media screen and (min-width: 992px){
+
     .team{
-        
         .profiles{
             .profile{
                 .profile__img{
@@ -86,25 +88,35 @@
             }
         }
     }
+
 }
 
 ////////////////////////////////////
 
 @media screen and (min-width: 1200px){
+
     .team{
+        padding-bottom: 5%;
         .profiles{
             width: 80%;
+            gap: 0 1vw;
+            padding-top: 2%;
+            padding-bottom: 2%;
             .profile{
-                width: 20%;
+                width: 18%;
                 row-gap: 0vw;
                 .profile__img{
-                    height: 18vw;
+                    height: 15vw;
                 }
                 .profile__name{
                     padding-top: 1vw;
                 }
             }
         }
+        .team__hiring-description{
+            padding: 0;
+        }
     }
+
 }
 

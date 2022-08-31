@@ -1,0 +1,126 @@
+@import './_functions.less';
+
+.review{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-image: url(../img/review__background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    row-gap: 1vw;
+
+    .review__quote{
+        .text-style(h2,@size: 6rem);
+        height: 20vw
+    }
+    .review__paragraph{
+        .text-style(h3__p);
+        width: 90%;
+        &:after{
+            content: none;
+        }
+    }
+
+    .review__name{
+        .text-style(h3);
+        padding-top: 5%;
+    }
+
+    .review__job{
+        .text-style(p);
+        padding-bottom: 5%;
+    }
+
+    .avatars{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 5%;
+        width: 70%;
+        height: 20vw;
+
+        .avatars__button{
+            width: fit-content;
+            height: 5vw;
+            image{
+                width: 100%;
+                height: 5vw;
+            }
+        }
+        .avatars__avatar{
+            align-self: center;
+        }
+    }
+}
+
+///////////////////////////////////////
+
+@media screen and (min-width: 768px){
+    .review{
+        .review__quote{
+            height: 10vw;
+            padding: 3% 0 3% 0;
+        }
+        .review__job{
+            padding-bottom: 0;
+        }
+        .avatars{
+            width: 50%;
+            height: 15vw;
+            .avatars__button{
+                height: 3vw;
+                image{
+                    height: 3vw;
+                }
+            }
+        }
+    }
+}
+
+/////////////////////////////////////
+
+@media screen and (min-width: 992px){
+    .review{
+        .review__quote{
+            height: 10vw;
+            padding-bottom: 0;
+        }
+        .review__paragraph{
+            width: 70%;
+            padding-bottom: 0;
+        }
+        .avatars{
+            width: 40%;
+        }
+    }
+}
+
+/////////////////////////////////////
+
+@media screen and (min-width: 1200px){
+    .review{
+        .review__quote{
+            height: 5vw;
+            padding: 2% 0 0% 0;
+        }
+        .review__paragraph{
+            width: 50%;
+        }
+        .review__name{
+            padding-top: 2%;
+        }
+        .avatars{
+            width: 25%;
+            height: 10vw;
+            padding-bottom: 0;
+            .avatars__button{
+                height: 2vw;
+                image{
+                    height: 2vw;
+                }
+            }
+        }
+    }
+}

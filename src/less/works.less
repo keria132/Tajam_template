@@ -1,0 +1,63 @@
+@import "./_functions.less";
+
+.works{
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 5vw;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    .works__header{
+        width: 50%;
+        .text-style(h2);
+    }
+    .works__p{
+        width: 50%;
+        .text-style(p);
+    }
+    .projects{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100vw;
+        justify-content: center;
+        .projects__img{
+            background-color: #f5f4f6;
+            border: gray solid 1px;
+            height: 20vw;
+            width: 31.5vw;
+        }
+    }
+
+    .works__button{
+        .buttons-style();
+    }
+}
+
+///////////////////////////////////
+@media screen and (min-width: 768px){
+
+    .works{
+        .projects{
+            .projects__img{
+                width: 24vw;
+                height: 18vw;
+            }
+        }
+    }
+
+}
+
+///////////////////////////////////
+@media screen and (min-width: 1200px){
+
+    .works{
+        .projects{
+            .projects__img{
+                width: 16vw;
+                height: 12vw;
+            }
+        }
+    }
+
+}

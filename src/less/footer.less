@@ -1,0 +1,211 @@
+@import './_functions.less';
+
+.footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-image: url("../img/footer__background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    row-gap: 5vw;
+
+    .description{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 80%;
+        row-gap: 3vw;
+        padding-top: 5%;
+
+        .description__paragraph{
+            .text-style(p);
+            text-align: left;
+        }
+    }
+
+    .contacts{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 80%;
+        row-gap: 3vw;
+
+        .contacts__header{
+            .text-style(h3);
+            text-align: left;
+        }
+        
+        .contacts__div{
+            display: flex;
+            flex-flow: row nowrap;
+            column-gap: 3vw;
+            img{
+                align-self: flex-start;
+            }
+            p{
+                .text-style(p);
+                text-align: left;
+            }
+        }
+    }
+
+    .socials{
+        display: flex;
+        flex-flow: row wrap;
+        width: 80%;
+        column-gap: 2vw;
+        row-gap: 3vw;
+
+        .socials__h3{
+            .text-style(h3);
+            text-align: left;
+        }
+
+        .socials__form{
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+
+            .socials__newsletter{
+                width: 75%;
+                margin-right: 2%;
+                background-color: transparent;
+                border: 1px solid #9d97af;
+                .text-style(p);
+                
+                &::placeholder{
+                    color: #9d97af;
+                }
+            }
+
+            .socials__button{
+                width: 20%;
+                background-color: #9d97af;
+                opacity: 0.8;
+                border: 0;
+                cursor: pointer;
+            }
+        }
+
+        .socials__icon{
+            display: flex;
+            justify-content: center;
+            width: 10vw;
+            height: 10vw;
+            border: 1px solid white;
+            border-radius: 50%;
+            background-color: transparent;
+            cursor: pointer;
+            .socials__icon-img{
+                align-self: center;
+            }
+        }
+    }
+
+    .bottom{
+        display: flex;
+        flex-flow: row wrap;
+        width: 80%;
+        row-gap: 3vw;
+
+        .bottom__menu{
+            display: flex;
+            flex-flow: row nowrap;
+            column-gap: 3vw;
+            .bottom__menu-li{
+                .text-style(nav);
+                cursor: pointer;
+                line-height: 1.5rem;
+            }
+        }
+
+        .bottom__watermark{
+            .text-style(p);
+            padding-bottom: 5vw;
+        }
+    }
+}
+
+/////////////////////////////////////
+
+@media screen and (min-width: 768px){
+
+    .footer{
+        .contacts{
+            width: 40%;
+            row-gap: 2vw;
+        }
+
+        .socials{
+            width: 40%;
+            row-gap: 2vw;
+            column-gap: 1vw;
+            .socials__icon{
+                width: 5vw;
+                height: 5vw;
+            }
+        }
+
+        .bottom{
+            justify-content: space-between;
+        }
+    }
+
+}
+
+/////////////////////////////////////
+
+@media screen and (min-width: 992px){
+
+    .footer{
+        .socials{
+            .socials__icon{
+                width: 4vw;
+                height: 4vw;
+            }
+        }
+    }
+
+}
+
+/////////////////////////////////////
+
+@media screen and (min-width: 1200px){
+    .footer{
+        column-gap: 2vw;
+        row-gap: 3vw;
+        .description{
+            width: 20%;
+            row-gap: 1vw;
+        }
+        .contacts{
+            width: 20%;
+            padding-top: 6vw;
+            row-gap: 1vw;
+            .contacts__header{
+                padding-bottom: 1vw;
+            }
+            .contacts__div{
+                column-gap: 1vw;
+            }
+        }
+        .socials{
+            width: 20%;
+            padding-top: 6vw;
+            column-gap: 0.5vw;
+            .socials__form{
+                height: 3vw;
+            }
+            .socials__icon{
+                width: 2.5vw;
+                height: 2.5vw;
+            }
+        }
+        .bottom{
+            width: 65%;
+            .bottom__watermark{
+                padding-bottom: 4vw;
+            }
+        }
+    }
+}
